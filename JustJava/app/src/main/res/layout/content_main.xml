@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.kevalsanghani.justjava.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:paddingBottom="16dp"
+            style="@style/JJText"
+            android:text="@string/welcome" />
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Name"
+            android:inputType="textCapWords"/>
+
+        <TextView
+            style="@style/JJText"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Quantity:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="dec"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="1"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:onClick="inc"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/JJText"
+            android:paddingBottom="16dp"
+            android:text="@string/toppings"/>
+
+        <CheckBox
+            android:id="@+id/whipped_cream_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whipped Cream"
+            android:paddingLeft="24dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/choco_flakes_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choco Flakes"
+            android:paddingLeft="24dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/JJText"
+            android:paddingBottom="16dp"
+            android:text="Order Summary:"/>
+
+        <TextView
+            android:id="@+id/order_summary_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="Rs.50 / coffee + \n Rs.10/c for Whipped Cream + \n Rs.25/c for Choco Flakes"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitOrder"
+            android:text="ORDER"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</ScrollView>
